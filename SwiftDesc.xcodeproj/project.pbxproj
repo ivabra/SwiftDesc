@@ -10,6 +10,12 @@
 		9F6A8EA420D2758F00FF0FDA /* SwiftDesc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F6A8E9A20D2758E00FF0FDA /* SwiftDesc.framework */; };
 		9F6A8EA920D2758F00FF0FDA /* SwiftDescTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6A8EA820D2758F00FF0FDA /* SwiftDescTests.swift */; };
 		9F6A8EAB20D2758F00FF0FDA /* SwiftDesc.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F6A8E9D20D2758E00FF0FDA /* SwiftDesc.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F6A8EBD20D275AE00FF0FDA /* ReflectableStringConvertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6A8EB520D275AD00FF0FDA /* ReflectableStringConvertable.swift */; };
+		9F6A8EBE20D275AE00FF0FDA /* CustomReflectableStringConvertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6A8EB620D275AD00FF0FDA /* CustomReflectableStringConvertable.swift */; };
+		9F6A8EBF20D275AE00FF0FDA /* URL+ReflectableStringConvertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6A8EB820D275AD00FF0FDA /* URL+ReflectableStringConvertable.swift */; };
+		9F6A8EC020D275AE00FF0FDA /* String+NewLinePadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6A8EBA20D275AE00FF0FDA /* String+NewLinePadding.swift */; };
+		9F6A8EC120D275AE00FF0FDA /* CustomStringConvertible+Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6A8EBB20D275AE00FF0FDA /* CustomStringConvertible+Padding.swift */; };
+		9F6A8EC220D275AE00FF0FDA /* ObjectDescriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6A8EBC20D275AE00FF0FDA /* ObjectDescriber.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +35,12 @@
 		9F6A8EA320D2758F00FF0FDA /* SwiftDescTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftDescTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F6A8EA820D2758F00FF0FDA /* SwiftDescTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDescTests.swift; sourceTree = "<group>"; };
 		9F6A8EAA20D2758F00FF0FDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F6A8EB520D275AD00FF0FDA /* ReflectableStringConvertable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReflectableStringConvertable.swift; sourceTree = "<group>"; };
+		9F6A8EB620D275AD00FF0FDA /* CustomReflectableStringConvertable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomReflectableStringConvertable.swift; sourceTree = "<group>"; };
+		9F6A8EB820D275AD00FF0FDA /* URL+ReflectableStringConvertable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+ReflectableStringConvertable.swift"; sourceTree = "<group>"; };
+		9F6A8EBA20D275AE00FF0FDA /* String+NewLinePadding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+NewLinePadding.swift"; sourceTree = "<group>"; };
+		9F6A8EBB20D275AE00FF0FDA /* CustomStringConvertible+Padding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CustomStringConvertible+Padding.swift"; sourceTree = "<group>"; };
+		9F6A8EBC20D275AE00FF0FDA /* ObjectDescriber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectDescriber.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +83,10 @@
 		9F6A8E9C20D2758E00FF0FDA /* SwiftDesc */ = {
 			isa = PBXGroup;
 			children = (
+				9F6A8EB420D275AD00FF0FDA /* Convertable */,
+				9F6A8EBC20D275AE00FF0FDA /* ObjectDescriber.swift */,
+				9F6A8EB720D275AD00FF0FDA /* Types */,
+				9F6A8EB920D275AE00FF0FDA /* Utils */,
 				9F6A8E9D20D2758E00FF0FDA /* SwiftDesc.h */,
 				9F6A8E9E20D2758F00FF0FDA /* Info.plist */,
 			);
@@ -84,6 +100,32 @@
 				9F6A8EAA20D2758F00FF0FDA /* Info.plist */,
 			);
 			path = SwiftDescTests;
+			sourceTree = "<group>";
+		};
+		9F6A8EB420D275AD00FF0FDA /* Convertable */ = {
+			isa = PBXGroup;
+			children = (
+				9F6A8EB520D275AD00FF0FDA /* ReflectableStringConvertable.swift */,
+				9F6A8EB620D275AD00FF0FDA /* CustomReflectableStringConvertable.swift */,
+			);
+			path = Convertable;
+			sourceTree = "<group>";
+		};
+		9F6A8EB720D275AD00FF0FDA /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				9F6A8EB820D275AD00FF0FDA /* URL+ReflectableStringConvertable.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		9F6A8EB920D275AE00FF0FDA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				9F6A8EBA20D275AE00FF0FDA /* String+NewLinePadding.swift */,
+				9F6A8EBB20D275AE00FF0FDA /* CustomStringConvertible+Padding.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +190,7 @@
 				TargetAttributes = {
 					9F6A8E9920D2758E00FF0FDA = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 0940;
 					};
 					9F6A8EA220D2758F00FF0FDA = {
 						CreatedOnToolsVersion = 9.4;
@@ -194,6 +237,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F6A8EC120D275AE00FF0FDA /* CustomStringConvertible+Padding.swift in Sources */,
+				9F6A8EBD20D275AE00FF0FDA /* ReflectableStringConvertable.swift in Sources */,
+				9F6A8EC020D275AE00FF0FDA /* String+NewLinePadding.swift in Sources */,
+				9F6A8EBE20D275AE00FF0FDA /* CustomReflectableStringConvertable.swift in Sources */,
+				9F6A8EC220D275AE00FF0FDA /* ObjectDescriber.swift in Sources */,
+				9F6A8EBF20D275AE00FF0FDA /* URL+ReflectableStringConvertable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +388,7 @@
 		9F6A8EAF20D2758F00FF0FDA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -356,6 +406,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ivanbrazhnikov.SwiftDesc;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +415,7 @@
 		9F6A8EB020D2758F00FF0FDA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -389,6 +441,7 @@
 		9F6A8EB220D2758F00FF0FDA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 55BKHE3292;
 				INFOPLIST_FILE = SwiftDescTests/Info.plist;
@@ -407,6 +460,7 @@
 		9F6A8EB320D2758F00FF0FDA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 55BKHE3292;
 				INFOPLIST_FILE = SwiftDescTests/Info.plist;

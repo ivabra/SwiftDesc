@@ -1,36 +1,34 @@
-//
-//  SwiftDescTests.swift
-//  SwiftDescTests
-//
-//  Created by Ivan Brazhnikov on 14/06/2018.
-//  Copyright © 2018 Ivan Brazhnikov. All rights reserved.
-//
-
 import XCTest
+import Foundation
 @testable import SwiftDesc
 
-class SwiftDescTests: XCTestCase {
-    
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
+class SwiftObjectDescriberTests: XCTestCase {
+
+  let describer = ObjectDescriber(options: .init(showTypes: false,
+                                                 separator: ": ",
+                                                 dictionarySeparator: ": ",
+                                                 enumSeparator: ": ",
+                                                 classSeparator: ": ",
+                                                 turpleSeparator: ": "))
+  func testSimpleStruct() {
+    let aStruct = MyStruct(name: "Ivan",
+                           age: 10,
+                           vk: URL(string: "https://vk.com/id13123213")!)
+    let description = describer.describe(aStruct)
+    let expected = """
+    MyStruct(
+     name: "Ivan",
+     age: 10,
+     vk: URL(string: "https://vk.com/id13123213")
+    )
+    """
+    XCTAssertEqual(description, expected)
+  }
+
+}
+
+private struct MyStruct {
+  var name: String
+  var age: Int
+  var vk: URL
 }
